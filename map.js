@@ -1,15 +1,35 @@
 var words = ["ground", "control", "to", "major", "tom"];
 
-map(words, function (word) {
-    return word.length;
+
+function map(words, cb) {
+    var results = [];
+    for (i = 0; i < words.length; i++) {
+        var result = cb(words[i]);
+        results.push(result);
+    }
+    return results;
+
+    // cb(x);
+    // result wordCount(x);
+}
+// word count
+var wordCount = map(words, function (num) {
+    return num.length;
 });
 
-map(words, function (word) {
+
+
+// // uppercase
+var uppercase = map(words, function (word) {
     return word.toUpperCase();
 });
 
-map(words, function (word) {
+
+// // backwards
+var backwards = map(words, function (word) {
     return word.split('').reverse().join('');
 });
 
-
+console.log(wordCount);
+console.log(uppercase);
+console.log(backwards);
