@@ -1,8 +1,6 @@
 var countdownGenerator = function (x) {
     // console.log(countdown);
     return function () {
-        // var t = countdown;
-        // console.log(t)
         if (x > 0) {
             console.log("T-minus " + x + "...");
         } else if (x < 0) {
@@ -14,7 +12,7 @@ var countdownGenerator = function (x) {
         // countdown--;
         // console.log(countdown);
     };
-}
+};
 var countdown = countdownGenerator(3);
 countdown(); // T-minus 3...
 countdown(); // T-minus 2...
