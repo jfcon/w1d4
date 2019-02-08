@@ -2,16 +2,16 @@ var countdownGenerator = function (x) {
     var countdown = x;
     // console.log(countdown);
     return function () {
-        var t = countdown;
+        // var t = countdown;
         // console.log(t)
-        countdown --;
-        if (t > 0) {
-            console.log("T-minus " + t + "...");
-        } else if (t < 0) {
+        if (countdown > 0) {
+            console.log("T-minus " + countdown + "...");
+        } else if (countdown < 0) {
             console.log("Rockets already gone, bub!");
         } else {
             console.log("Blast off!");
         }
+        countdown --;
         // countdown--;
         // console.log(countdown);
     };
