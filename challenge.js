@@ -1,18 +1,17 @@
-var list = [1,2,3,4,5,6,7,8,9].filter(odds);
+var list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
-// goes through the array
-// each array item is called value
-// checks to see if there's a remainder of 1 in each value
-// puts it in var x if true
-// returns it to the filter function
-
-function odds(value) {
-    x = value % 2 === 1;
-    return x;
+function odds(list, cb) {
+    for (var i = 0; i < list.length; i++) {
+        cb(list[i]);
+    }
 }
 
-console.log(list);
+odds(list, function (num) {
+    if (num % 2 == 1){
+        console.log(num)
+    }
+});
 
 // vvvv close, but it's not implemented vvvvvv
 
